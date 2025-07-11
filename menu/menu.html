@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menü-Yebisyo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body class="bg-cream-100 font-sans">
+    <!-- Navbar -->
+    <nav class="bg-gradient-to-r from-orange-600 to-orange-400 shadow-lg p-4 flex items-center justify-between sticky top-0 z-50">
+        <div class="flex items-center">
+            <img src="../logo.png" alt="Restoran Logosu" class="h-12">
+        </div>
+        <div class="flex items-center space-x-8">
+            <a href="index.html" class="nav-link text-white text-lg font-medium">Ana Sayfa</a>
+            <a href="#menu" class="nav-link text-white text-lg font-medium">Menü</a>
+            <a href="index.html#about" class="nav-link text-white text-lg font-medium">Hakkımızda</a>
+            <a href="index.html#contact" class="nav-link text-white text-lg font-medium">İletişim</a>
+            <button class="nav-button bg-white text-orange-600 px-6 py-2 rounded-full font-semibold shadow-md">Sipariş Ver</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-cover bg-center h-64 flex items-center justify-center text-white" style="background-image: url('https://images.unsplash.com/photo-1517953720815-3ad3488a67f1?q=80&w=1025&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+        <h1 class="text-4xl font-bold text-cream-100">Menümüz</h1>
+    </section>
+
+    <!-- Menu Categories -->
+    <section class="py-12 px-4 max-w-6xl mx-auto">
+        <!-- Çorba -->
+        <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Çorbalar</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1642497394078-4794e837019c?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mercimek Çorbası" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Mercimek Çorbası</h3>
+                        <p class="text-gray-600">Kırmızı mercimek ile hazırlanmış geleneksel lezzet.</p>
+                        <p class="text-orange-600 font-bold mt-2">20 TL</p>
+                    </div>
+                </div>
+                <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1574885198468-488944bf9b89?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Tavuk Çorbası" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Tavuk Çorbası</h3>
+                        <p class="text-gray-600">Taze tavuk etiyle hazırlanan besleyici çorba.</p>
+                        <p class="text-orange-600 font-bold mt-2">25 TL</p>
+                    </div>
+                </div>
+                 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="yayla.jpg" alt="Yayla Çorbası" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Yayla Çorbası</h3>
+                        <p class="text-gray-600">Taze tavuk etiyle hazırlanan besleyici çorba.</p>
+                        <p class="text-orange-600 font-bold mt-2">25 TL</p>
+                    </div>
+                </div>
+                 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1673021889619-0677506b56ac?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Ezogelin Çorbası" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Ezogelin Çorbası</h3>
+                        <p class="text-gray-600">Taze tavuk etiyle hazırlanan besleyici çorba.</p>
+                        <p class="text-orange-600 font-bold mt-2">25 TL</p>
+                    </div>
+                </div>
+                 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="kele.jpeg" alt="Kelle Paça Çorbası" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Kelle Paça Çorbası</h3>
+                        <p class="text-gray-600">Taze et ile hazırlanan besleyici çorba.</p>
+                        <p class="text-orange-600 font-bold mt-2">25 TL</p>
+                    </div>
+                </div>
+                 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="tomato.jpg" alt="Domates Çorbası" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Domates Çorbası</h3>
+                        <p class="text-gray-600">Taze tavuk etiyle hazırlanan besleyici çorba.</p>
+                        <p class="text-orange-600 font-bold mt-2">25 TL</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- Ara Sıcak -->
+        <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Ara Sıcaklar</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1679310290259-78d9eaa32700?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Sigara Böreği" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Sigara Böreği</h3>
+                        <p class="text-gray-600">Peynir dolgulu çıtır börek.</p>
+                        <p class="text-orange-600 font-bold mt-2">15 TL</p>
+                    </div>
+                </div>
+
+
+                <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="mücver.jpg" alt="Mücver" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Mücver</h3>
+                        <p class="text-gray-600">Bol Sebzeli Aperatif</p>
+                        <p class="text-orange-600 font-bold mt-2">15 TL</p>
+                    </div>
+                </div>
+
+
+                <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1747628857843-96f695316cfc?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Patates Kroket" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Patates Kroket</h3>
+                        <p class="text-gray-600"> Püre patatesle yapılan, dışı çıtır içi yumuşacık kroketler. Daldırmalık sosla sun, bayılacaksın!</p>
+                        <p class="text-orange-600 font-bold mt-2">15 TL</p>
+                    </div>
+                </div>
+
+                <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1734460996512-cd87a1c9d525?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Paçanga Böreği " class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Paçanga Böreği </h3>
+                        <p class="text-gray-600">Pastırma, kaşar ve biberle yapılan bu börekler, hem pratik hem şahane. </p>
+                        <p class="text-orange-600 font-bold mt-2">15 TL</p>
+                    </div>
+                </div>
+
+
+                <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="icli.jpg" alt="İçli Köfte" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">İçli Köfte</h3>
+                        <p class="text-gray-600">Kıyma Tadını Damaklarına Kadar Tadacak Mükemmel Bir Tat</p>
+                        <p class="text-orange-600 font-bold mt-2">15 TL</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ana Yemek -->
+        <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Ana Yemekler</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+               <!-- Kayseri Yağlaması -->
+                <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="yağlama.png" alt="Kayseri Yağlaması" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Kayseri Yağlaması</h3>
+                        <p class="text-gray-600">Kat kat lavaşlar arasında kıymalı harç, yanında sarımsaklı yoğurtla servis edilir.</p>
+                        <p class="text-orange-600 font-bold mt-2">65 TL</p>
+                    </div>
+                </div>
+
+                <!-- Fırın Tavuk Baget -->
+                <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="baget.png" alt="Fırın Tavuk Baget" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Fırın Tavuk Baget</h3>
+                        <p class="text-gray-600">Baharatlı patates eşliğinde fırınlanmış çıtır tavuk butları.</p>
+                        <p class="text-orange-600 font-bold mt-2">55 TL</p>
+                    </div>
+                </div>
+
+                <!-- Etli Nohut -->
+                <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="etli-nohut-yemegi-i.jpg" alt="Etli Nohut" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Etli Nohut</h3>
+                        <p class="text-gray-600">Lokum gibi etle birleşen nohutun sıcacık uyumu.</p>
+                        <p class="text-orange-600 font-bold mt-2">60 TL</p>
+                    </div>
+                </div>
+
+                <!-- Karnıyarık -->
+                <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="Etsiz-Karniyarik.jpg" alt="Karnıyarık" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Karnıyarık</h3>
+                        <p class="text-gray-600">Kızartılmış patlıcan içine nefis kıymalı harçla fırınlanır.</p>
+                        <p class="text-orange-600 font-bold mt-2">58 TL</p>
+                    </div>
+                </div>
+
+                <!-- Et Döner -->
+                <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="döner.jpg" alt="Et Döner" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Et Döner</h3>
+                        <p class="text-gray-600">Yurdumuzun Yıllardır Vazgeçilmez lezzetini tadın</p>
+                        <p class="text-orange-600 font-bold mt-2">50 TL</p>
+                    </div>
+                </div>
+
+                <!--Adana Kebap -->
+                <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="adana-kebap-2-sutis.jpg" alt="Adana Kebap" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Adana Kebap</h3>
+                        <p class="text-gray-600">Ustamızın Ellerinden Enfes bir adana turunu damaklarınızda hissedeceksiniz</p>
+                        <p class="text-orange-600 font-bold mt-2">52 TL</p>
+                    </div>
+                </div>
+
+                <!-- İzmir Köfte -->
+                <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="izmir-kofte-tarifi-1652-diger-izmir-kofte-tarifi-1640-16-B.jpg" alt="İzmir Köfte" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">İzmir Köfte</h3>
+                        <p class="text-gray-600">Patatesle fırınlanan domates soslu köfte harikası.</p>
+                        <p class="text-orange-600 font-bold mt-2">57 TL</p>
+                    </div>
+                </div>
+
+                <!-- Hatay Usulü Tavuk Döner -->
+                <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="hatay.jpg" alt="Hatay Usulü Tavuk Döner" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Hatay Usulü Tavuk Döner</h3>
+                        <p class="text-gray-600">Hatayın Enfes domates sosuyla birleşen tavuklar adeta dans ediyor damaklarınızda</p>
+                        <p class="text-orange-600 font-bold mt-2">54 TL</p>
+                    </div>
+                </div>
+
+
+                  <!-- Alinazik -->
+                <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="alinazik.jpg" alt="Alinazik " class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Alinazik</h3>
+                        <p class="text-gray-600">Bol Etli tepsi bol malzeme garanti doyum</p>
+                        <p class="text-orange-600 font-bold mt-2">55 TL</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Salata -->
+        <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Salatalar</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd" alt="Çoban Salata" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Çoban Salata</h3>
+                        <p class="text-gray-600">Taze sebzelerle hazırlanmış klasik salata.</p>
+                        <p class="text-orange-600 font-bold mt-2">18 TL</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- İçecek -->
+        <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">İçecekler</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1572441713422-8b0139f7f8e6" alt="Ayran" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Ayran</h3>
+                        <p class="text-gray-600">Ev yapımı taze ayran.</p>
+                        <p class="text-orange-600 font-bold mt-2">10 TL</p>
+                    </div>
+                </div>
+                <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1572441713422-8b0139f7f8e6" alt="Şalgam Suyu" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Şalgam Suyu</h3>
+                        <p class="text-gray-600">Geleneksel ferahlatıcı içecek.</p>
+                        <p class="text-orange-600 font-bold mt-2">12 TL</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tatlı -->
+        <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Tatlılar</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1623335659138-0e397d7156b3" alt="Künefe" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Künefe</h3>
+                        <p class="text-gray-600">Peynirli ve şerbetli özel tatlı.</p>
+                        <p class="text-orange-600 font-bold mt-2">35 TL</p>
+                    </div>
+                </div>
+                <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1623335659138-0e397d7156b3" alt="Baklava" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Baklava</h3>
+                        <p class="text-gray-600">Fıstıklı ve şerbetli klasik tatlı.</p>
+                        <p class="text-orange-600 font-bold mt-2">40 TL</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p>© 2025 Restoran Adınız. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="menu.js"></script>
+</body>
+</html>
