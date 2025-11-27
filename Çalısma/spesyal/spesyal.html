@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spesyaller - Yebisyo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="spesyal.css">
+</head>
+<body class="bg-cream-100 font-sans">
+
+    <!-- Navbar -->
+    <nav class="bg-gradient-to-r from-orange-600 to-orange-400 shadow-lg p-4 flex items-center justify-between sticky top-0 z-50">
+       <div class="flex items-center">
+            <img src="../logo (1).png" alt="Logo" class="h-12">
+        </div>
+        <div class="flex items-center space-x-8">
+            <a href="../index.html" class="nav-link text-white text-lg font-medium">Ana Sayfa</a>
+            <a href="../menu/menu.html" class="nav-link text-white text-lg font-medium">Menü</a>
+            <a href="../Hakkımızda/hakkımızda.html" class="nav-link text-white text-lg font-medium">Hakkımızda</a>
+            <a href="../İletişim/iletişim.html" class="nav-link text-white text-lg font-medium">İletişim</a>
+            
+            <div class="relative">
+                <a href="../Sipariş/siparis.html" class="bg-white text-orange-600 px-6 py-2 rounded-full font-semibold shadow-md hover:bg-gray-100 transition inline-flex items-center">
+                    Sepet 
+                    <span id="cart-count" class="ml-2 bg-red-600 text-white text-xs rounded-full w-6 h-6 flex items-center justify-center hidden">0</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="bg-cover bg-center h-64 flex items-center justify-center text-white" style="background-image: url('https://images.unsplash.com/photo-1517953720815-3ad3488a67f1?q=80&w=1025&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+        <h1 class="text-4xl font-bold text-cream-100">Spesyallerimiz</h1>
+    </section>
+
+    <!-- Tüm Spesyaller (9 ürün) -->
+    <section class="py-12 px-4 max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Öne Çıkan Spesyaller</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <!-- 1. Beef Wellington -->
+            <div class="menu-item relative bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="beef.png" alt="Beef Wellington" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Beef Wellington</h3>
+                    <p class="text-gray-600">Fileto biftek, mantarlı harç ve milföy hamuru ile fırınlanıyor.</p>
+                    <p class="text-orange-600 font-bold mt-2">180 TL</p>
+                    <button onclick="addToCart('Beef Wellington', 180)" class="mt-3 w-full bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700 transition font-medium">
+                        Sepete Ekle
+                    </button>
+                </div>
+                <div class="overlay absolute inset-0 bg-white bg-opacity-95 flex flex-col justify-center items-center text-center p-6">
+                    <h3 class="text-xl font-semibold text-gray-800">Beef Wellington Özellikleri</h3>
+                    <p class="text-gray-600 mt-2">Neden Spesyal? Sunumu gösterişli ve lezzeti eşsiz.</p>
+                    <p class="text-gray-600 mt-2">Helal et • Milföy dokusu • Zengin tat</p>
+                </div>
+            </div>
+
+            <!-- 2. Paella -->
+            <div class="menu-item relative bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="paella.jpeg" alt="Paella" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Paella</h3>
+                    <p class="text-gray-600">Safranlı pirinç, deniz ürünleri, tavuk ve sebzelerle kocaman tava yemeği.</p>
+                    <p class="text-orange-600 font-bold mt-2">90 TL</p>
+                    <button onclick="addToCart('Paella', 90)" class="mt-3 w-full bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700 transition font-medium">Sepete Ekle</button>
+                </div>
+                <div class="overlay absolute inset-0 bg-white bg-opacity-95 flex flex-col justify-center items-center text-center p-6">
+                    <h3 class="text-xl font-semibold text-gray-800">Paella Özellikleri</h3>
+                    <p class="text-gray-600 mt-2">Renkli ve görsel şölen sunar.</p>
+                    <p class="text-gray-600 mt-2">Deniz ürünleri • Safran • Helal</p>
+                </div>
+            </div>
+
+            <!-- 3. Ratatouille -->
+            <div class="menu-item relative bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="ratat.png" alt="Ratatouille" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Ratatouille</h3>
+                    <p class="text-gray-600">İncecik dilimlenmiş sebzelerin sanatsal şekilde dizilip fırınlandığı tabak.</p>
+                    <p class="text-orange-600 font-bold mt-2">70 TL</p>
+                    <button onclick="addToCart('Ratatouille', 70)" class="mt-3 w-full bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700 transition font-medium">Sepete Ekle</button>
+                </div>
+                <div class="overlay absolute inset-0 bg-white bg-opacity-95 flex flex-col justify-center items-center text-center p-6">
+                    <h3 class="text-xl font-semibold text-gray-800">Ratatouille Özellikleri</h3>
+                    <p class="text-gray-600 mt-2">Hem göz hem mide bayramı.</p>
+                    <p class="text-gray-600 mt-2">Taze sebzeler • Sanatsal sunum • Helal</p>
+                </div>
+            </div>
+
+            <!-- 4. Sushi Omakase -->
+            <div class="menu-item relative bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="sushi.jpg" alt="Sushi Omakase" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Sushi Omakase</h3>
+                    <p class="text-gray-600">Şefin seçtiği günlük taze sushi çeşitleri.</p>
+                    <p class="text-orange-600 font-bold mt-2">180 TL</p>
+                    <button onclick="addToCart('Sushi Omakase', 180)" class="mt-3 w-full bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700 transition font-medium">Sepete Ekle</button>
+                </div>
+                <div class="overlay absolute inset-0 bg-white bg-opacity-95 flex flex-col justify-center items-center text-center p-6">
+                    <h3 class="text-xl font-semibold text-gray-800">Sushi Omakase Özellikleri</h3>
+                    <p class="text-gray-600 mt-2">Her tabak bir sanat eseri gibi.</p>
+                    <p class="text-gray-600 mt-2">Taze balık • Helal • Şef seçimi</p>
+                </div>
+            </div>
+
+            <!-- 5. Mole Poblano -->
+            <div class="menu-item relative bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="mole.png" alt="Mole Poblano" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Mole Poblano</h3>
+                    <p class="text-gray-600">Tavuk veya hindi üzerinde çikolata, biber ve baharatlarla yapılan soslu yemek.</p>
+                    <p class="text-orange-600 font-bold mt-2">100 TL</p>
+                    <button onclick="addToCart('Mole Poblano', 100)" class="mt-3 w-full bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700 transition font-medium">Sepete Ekle</button>
+                </div>
+                <div class="overlay absolute inset-0 bg-white bg-opacity-95 flex flex-col justify-center items-center text-center p-6">
+                    <h3 class="text-xl font-semibold text-gray-800">Mole Poblano Özellikleri</h3>
+                    <p class="text-gray-600 mt-2">Görseli farklı ve lezzetli.</p>
+                    <p class="text-gray-600 mt-2">Çikolata sos • Helal et • Baharatlı</p>
+                </div>
+            </div>
+
+            <!-- 6. Foie Gras -->
+            <div class="menu-item relative bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="foiegras.jpg" alt="Foie Gras" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Foie Gras</h3>
+                    <p class="text-gray-600">Özel hazırlanmış ördek veya kaz ciğeri, şık sunumlarla.</p>
+                    <p class="text-orange-600 font-bold mt-2">130 TL</p>
+                    <button onclick="addToCart('Foie Gras', 130)" class="mt-3 w-full bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700 transition font-medium">Sepete Ekle</button>
+                </div>
+                <div class="overlay absolute inset-0 bg-white bg-opacity-95 flex flex-col justify-center items-center text-center p-6">
+                    <h3 class="text-xl font-semibold text-gray-800">Foie Gras Özellikleri</h3>
+                    <p class="text-gray-600 mt-2">Çok lüks ve gösterişli.</p>
+                    <p class="text-gray-600 mt-2">Helal alternatif • Yumuşak doku • Zengin tat</p>
+                </div>
+            </div>
+
+            <!-- 7. Baklava -->
+            <div class="menu-item relative bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="baklava.jpg" alt="Baklava" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Baklava</h3>
+                    <p class="text-gray-600">Fıstıklı, cevizli veya kaymaklı, şerbetli tatlı.</p>
+                    <p class="text-orange-600 font-bold mt-2">50 TL</p>
+                    <button onclick="addToCart('Baklava', 50)" class="mt-3 w-full bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700 transition font-medium">Sepete Ekle</button>
+                </div>
+                <div class="overlay absolute inset-0 bg-white bg-opacity-95 flex flex-col justify-center items-center text-center p-6">
+                    <h3 class="text-xl font-semibold text-gray-800">Baklava Özellikleri</h3>
+                    <p class="text-gray-600 mt-2">Dünyada 'special dessert' olarak biliniyor.</p>
+                    <p class="text-gray-600 mt-2">Şerbetli • Helal • Geleneksel tat</p>
+                </div>
+            </div>
+
+            <!-- 8. Ceviche -->
+            <div class="menu-item relative bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="ceviche.jpg" alt="Ceviche" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Ceviche</h3>
+                    <p class="text-gray-600">Çiğ balık, limon suyu, soğan ve kişnişle marine edilmiş ferahlatıcı tabak.</p>
+                    <p class="text-orange-600 font-bold mt-2">85 TL</p>
+                    <button onclick="addToCart('Ceviche', 85)" class="mt-3 w-full bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700 transition font-medium">Sepete Ekle</button>
+                </div>
+                <div class="overlay absolute inset-0 bg-white bg-opacity-95 flex flex-col justify-center items-center text-center p-6">
+                    <h3 class="text-xl font-semibold text-gray-800">Ceviche Özellikleri</h3>
+                    <p class="text-gray-600 mt-2">Renkli ve ferahlatıcı.</p>
+                    <p class="text-gray-600 mt-2">Taze balık • Helal • Hafif</p>
+                </div>
+            </div>
+
+            <!-- 9. Buritto -->
+            <div class="menu-item relative bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="../buritto.jpg" alt="Buritto" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Buritto</h3>
+                    <p class="text-gray-600">Tortilla içerisinde fasulye püresi, et/tavuk, peynir ve sebzelerle.</p>
+                    <p class="text-orange-600 font-bold mt-2">85 TL</p>
+                    <button onclick="addToCart('Buritto', 85)" class="mt-3 w-full bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700 transition font-medium">Sepete Ekle</button>
+                </div>
+                <div class="overlay absolute inset-0 bg-white bg-opacity-95 flex flex-col justify-center items-center text-center p-6">
+                    <h3 class="text-xl font-semibold text-gray-800">Buritto Özellikleri</h3>
+                    <p class="text-gray-600 mt-2">Doyurucu ve lezzet bombası.</p>
+                    <p class="text-gray-600 mt-2">Helal tavuk/et • Baharatlı • Pratik</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6 text-center">
+        <p>© 2025 Yebisyo. Tüm hakları saklıdır.</p>
+    </footer>
+
+    <!-- Sadece bu sayfaya özel sepet kodu + hover js -->
+    <script src="spesyal-cart.js"></script>
+    <script src="spesyal.js"></script>
+</body>
+</html>

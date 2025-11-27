@@ -1,0 +1,83 @@
+/* ====================== ORİJİNAL KODLARIN (bozulmadan korundu) ====================== */
+.menu-item {
+  transition: none;
+}
+.menu-item:hover {
+  transform: none;
+  box-shadow: none;
+}
+.nav-link:hover,
+.spesyal-link:hover {
+  color: #1e40af;
+  transition: color 0.3s ease;
+}
+.nav-button {
+  transition: all 0.3s ease;
+}
+.nav-button:hover {
+  background-color: #1e40af;
+  transform: translateY(-2px);
+  color: white;
+}
+.active {
+  font-weight: bold;
+  color: #ffffff;
+}
+#cart-items button {
+  padding: 2px 6px;
+  border: none;
+  cursor: pointer;
+}
+#coupon-list {
+  transition: max-height 0.3s ease;
+  max-height: 0;
+  overflow: hidden;
+}
+#coupon-list.open {
+  max-height: 500px;
+}
+#arrow-icon.rotate {
+  transform: rotate(180deg);
+}
+
+/* ====================== YENİ EKLEMELER (kupon kartları ve efektler) ====================== */
+.coupon-card {
+  transition: all 0.35s ease;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.coupon-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Bounce animasyonu (bedava künefe için) */
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Ekstra güzellikler */
+input:focus {
+  outline: none !important;
+  box-shadow: 0 0 0 4px rgba(251, 146, 60, 0.3);
+  border-color: #fb923c !important;
+}
+
+/* Sepet içindeki kaldır butonu */
+#cart-items button:hover {
+  transform: scale(1.3);
+  transition: transform 0.2s ease;
+}
+
+/* Genel yumuşak geçişler */
+button, a {
+  transition: all 0.3s ease;
+}

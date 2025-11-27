@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YEBİSYO</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head> 
+<body class="bg-cream-100 font-sans">
+    <!-- Navbar -->
+    <nav class="bg-gradient-to-r from-orange-600 to-orange-400 shadow-lg p-4 flex items-center justify-between sticky top-0 z-50">
+        <!-- Logo -->
+        <div class="flex items-center">
+            <img src="logo (1).png" alt="Restoran Logosu" class="h-12">
+        </div>
+        <!-- Navigation Links -->
+        <div class="flex items-center space-x-8">
+            <a href="spesyal/spesyal.html" class="nav-link text-white text-lg font-medium">Spesyaller</a>
+            <a href="menu/menu.html" class="nav-link text-white text-lg font-medium">Menü</a>
+            <a href="Hakkımızda/hakkımızda.html" class="nav-link text-white text-lg font-medium">Hakkımızda</a>
+            <a href="İletişim/iletişim.html" class="nav-link text-white text-lg font-medium">İletişim</a>
+             <button class="nav-button bg-white text-orange-600 px-6 py-2 rounded-full font-semibold shadow-md"><a href="../Sipariş/siparis.html">Sepet</a></button>
+
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-cover bg-center h-96 flex items-center justify-center text-white" style="background-image: url('yebfoto.jpg');">
+        <div class="text-center bg-orange-600 bg-opacity-75 p-8 rounded">
+            <h1 class="text-4xl font-bold mb-4 text-cream-100">Hoş Geldiniz!</h1>
+            <p class="text-lg text-cream-100">Lezzetli yemekler ve hızlı servis için doğru yerdesiniz.</p>
+        </div>
+    </section>
+
+    <!-- Helal Yemeğin Sırları Section -->
+    <section class="py-12 px-4 max-w-6xl mx-auto text-center">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Helal Yemeğin Sırları</h2>
+        <p class="text-lg text-gray-600">Helal yemek; sadece ne yediğimizle değil, nasıl üretildiği ve hazırlandığıyla da ilgilidir. Temiz, güvenilir ve ahlaki değerlerle örtüşen her lokma, beden kadar ruhu da besler.
+                Bu sayfada helal yemeğin arkasındaki bilinçli tercihleri, malzeme seçiminden pişirme yöntemlerine kadar mercek altına alıyoruz.
+                Çünkü helal yemek bir inanç değil, bir yaşam tarzıdır.
+                Hem sağlıklı, hem huzurlu, hem de lezzetli bir sofranın anahtarı burada gizli!</p>
+    </section>
+
+    <!-- Spesyaller Section -->
+    <section id="spesyaller" class="py-12 px-4 max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Öne Çıkan Spesyaller</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Menu Item 1 -->
+            <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="fettuccini.jpg" alt="Fettuccine Alfredo" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Fettuccine Alfredo</h3>
+                    <p class="text-gray-600">Fettuccine Alfredo, makarnayı kaplayan zengin bir peynir sosu oluşturmak üzere eriyip emülsiyon haline gelen, tereyağı ve Parmesan peyniri ile karıştırılmış fettuccineden oluşan bir makarna yemeğidir.</p>
+                    <p class="text-orange-600 font-bold mt-2">280 TL</p>
+                </div>
+            </div>
+            <!-- Menu Item 2 -->
+            <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="buritto.jpg" alt="Burrito" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Burrito</h3>
+                    <p class="text-gray-600"> Tortillanın katlanış biçimi, içerisine sürülen fasulye püresi, et, tavuk, peynir gibi malzemelerle değişik çeşitler hazırlanabilir.</p>
+                    <p class="text-orange-600 font-bold mt-2">150 TL</p>
+                </div>
+            </div>
+            <!-- Menu Item 3 -->
+            <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="mücber.jpg" alt="Tost" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Mücver Burger</h3>
+                    <p class="text-gray-600">Mücver Burger, geleneksel Türk mutfağının vazgeçilmezlerinden olan kabak mücverini, modern bir dokunuşla birleştirerek yepyeni bir lezzet deneyimi sunar.
+                        Klasik hamburger ekmeği yerine, dışı çıtır içi yumuşak mücver “ekmekleri” kullanılır. Arası ise tamamen damak zevkinize göre şekillenir!</p>
+                    <p class="text-orange-600 font-bold mt-2">100 TL</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p>© 2025 Yebisyo. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

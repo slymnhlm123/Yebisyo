@@ -1,0 +1,30 @@
+.menu-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+.menu-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+.menu-item .overlay {
+    display: none;
+}
+.menu-item:hover .overlay {
+    display: flex;
+    opacity: 1;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 10;
+}
+
+/* BUTON HER ZAMAN TIKLANABİLİR */
+.menu-item button {
+    position: relative;
+    z-index: 100 !important;
+}
+.menu-item:hover .overlay {
+    pointer-events: none; /* overlay butona engel olmaz */
+}
+
+.nav-link:hover { color: #1e40af; transition: color 0.3s ease; }
+.nav-button:hover { background-color: #1e40af; transform: translateY(-2px); color: white; }

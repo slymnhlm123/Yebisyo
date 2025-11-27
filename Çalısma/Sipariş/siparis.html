@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sepet - Yebisyo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="siparis.css" />
+</head>
+<body class="bg-gray-50 font-sans">
+
+  <!-- Navbar -->
+  <nav class="bg-gradient-to-r from-orange-600 to-orange-500 shadow-xl p-4 flex items-center justify-between sticky top-0 z-50">
+    <div class="flex items-center">
+      <img src="../logo (1).png" alt="Logo" class="h-12">
+    </div>
+    <div class="flex items-center space-x-8">
+      <a href="../index.html" class="text-white text-lg font-medium hover:text-orange-200">Ana Sayfa</a>
+      <a href="../menu/menu.html" class="text-white text-lg font-medium hover:text-orange-200">Menü</a>
+      <a href="../Hakkımızda/hakkımızda.html" class="text-white text-lg font-medium hover:text-orange-200">Hakkımızda</a>
+      <a href="../spesyal/spesyal.html" class="text-white text-lg font-medium hover:text-orange-200">Spesyaller</a>
+      <a href="../İletişim/iletişim.html" class="text-white text-lg font-medium hover:text-orange-200">İletişim</a>
+      
+      <!-- Sepet Sayısı Gösteren Buton -->
+      <div class="relative">
+        <a href="siparis.html" class="bg-white text-orange-600 px-6 py-2 rounded-full font-bold shadow-lg hover:bg-gray-100 transition inline-flex items-center">
+          Sepet 
+          <span id="cart-count" class="ml-2 bg-red-600 text-white text-xs rounded-full w-6 h-6 flex items-center justify-center hidden">0</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="bg-cover bg-center h-64 flex items-center justify-center text-white" style="background-image: url('https://images.unsplash.com/photo-1632297480951-7093254b8de3?q=80&w=1113&auto=format&fit=crop');">
+    <h1 class="text-5xl font-bold drop-shadow-2xl">Sepetim</h1>
+  </section>
+
+  <!-- Ana İçerik -->
+  <section class="py-12 px-4 max-w-6xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+      <!-- SEPET -->
+      <div class="lg:col-span-2 bg-white rounded-2xl shadow-xl p-8">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">Sepetiniz</h2>
+        <div id="cart-items" class="space-y-4 mb-8"></div>
+
+        <div class="border-t-2 border-gray-200 pt-6">
+          <p class="text-xl font-medium text-gray-700">Ara Toplam: <span id="cart-total" class="text-orange-600 font-bold">0 TL</span></p>
+          <p class="text-lg text-green-600 font-bold" id="discount">İndirim: 0 TL</p>
+          <p class="text-2xl font-bold text-blue-600 mt-3">Ödenecek Tutar: <span id="final-total">0 TL</span></p>
+        </div>
+      </div>
+
+      <!-- KUPONLAR -->
+      <div class="bg-white rounded-2xl shadow-xl p-8">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">Kuponlarım</h2>
+
+        <div class="space-y-5">
+          <div class="coupon-card bg-gradient-to-r from-orange-50 to-orange-100 border-2 border-orange-300 rounded-2xl p-5 text-center">
+            <p class="text-3xl font-black text-orange-600">YEBISYO25</p>
+            <p class="text-sm text-gray-600">150 TL ve üzeri alışverişlerde</p>
+            <p class="text-2xl font-bold text-green-600 mt-2">%25 İndirim</p>
+            <button onclick="applyCoupon('YEBISYO25', 0.25, 150)" class="mt-4 w-full bg-orange-600 text-white py-3 rounded-xl font-bold hover:bg-orange-700 transition">Kullan</button>
+          </div>
+
+          <div class="coupon-card bg-gradient-to-r from-purple-50 to-purple-100 border-2 border-purple-300 rounded-2xl p-5 text-center">
+            <p class="text-3xl font-black text-purple-600">HOŞGELDİN</p>
+            <p class="text-sm text-gray-600">İlk siparişine özel</p>
+            <p class="text-2xl font-bold text-green-600 mt-2">50 TL İndirim</p>
+            <button onclick="applyCoupon('HOŞGELDİN', 50, 0)" class="mt-4 w-full bg-purple-600 text-white py-3 rounded-xl font-bold hover:bg-purple-700 transition">Kullan</button>
+          </div>
+
+          <div class="coupon-card bg-gradient-to-r from-blue-50 to-blue-100 border-2 border-blue-300 rounded-2xl p-5 text-center">
+            <p class="text-3xl font-black text-blue-600">INDIRIM15</p>
+            <p class="text-sm text-gray-600">Tüm siparişlerde geçerli</p>
+            <p class="text-2xl font-bold text-green-600 mt-2">%15 İndirim</p>
+            <button onclick="applyCoupon('INDIRIM15', 0.15, 0)" class="mt-4 w-full bg-blue-600 text-white py-3 rounded-xl font-bold hover:bg-blue-700 transition">Kullan</button>
+          </div>
+
+          <div class="coupon-card bg-gradient-to-r from-red-50 to-red-100 border-2 border-red-300 rounded-2xl p-5 text-center">
+            <p class="text-3xl font-black text-red-600">KUNEFEHEDİYE</p>
+            <p class="text-sm text-gray-600">400 TL ve üzeri alışverişte</p>
+            <p class="text-2xl font-bold text-green-600 mt-2">1 Künefe BEDAVA!</p>
+            <button onclick="applyFreeKunefe()" class="mt-4 w-full bg-red-600 text-white py-3 rounded-xl font-bold hover:bg-red-700 transition">Kullan</button>
+          </div>
+        </div>
+
+        <p id="coupon-status" class="mt-8 text-center text-lg font-bold"></p>
+      </div>
+
+      <!-- ONAYLA -->
+      <div class="lg:col-span-3 bg-white rounded-2xl shadow-xl p-10 text-center">
+        <h2 class="text-3xl font-bold text-gray-800 mb-8">Siparişi Tamamla</h2>
+        <button id="confirm-cart" class="bg-green-600 text-white text-2xl px-12 py-5 rounded-full hover:bg-green-700 shadow-2xl font-bold transition">
+          Sepeti Onayla ve Devam Et
+        </button>
+
+        <div id="confirmation-area" class="mt-12 hidden">
+          <p class="text-xl text-gray-700 mb-6">Siparişiniz hazır! Lütfen teslimat adresinizi girin:</p>
+          <input type="text" id="address-input" placeholder="Örn: Atatürk Mah. 123. Sokak No:5 D:3" class="w-full max-w-2xl mx-auto px-6 py-5 text-lg border-2 border-gray-300 rounded-xl focus:border-orange-500 outline-none" />
+          <button id="place-order" class="mt-8 bg-orange-600 text-white text-2xl px-14 py-5 rounded-full hover:bg-orange-700 shadow-2xl font-bold transition">
+            Siparişi Ver → 35-45 dk
+          </button>
+          <p id="order-status" class="mt-8 text-2xl font-bold"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-gray-900 text-white py-10 text-center">
+    <p class="text-lg">© 2025 Yebisyo – Lezzet Kapına Gelsin</p>
+  </footer>
+
+  <script src="siparis.js"></script>
+</body>
+</html>

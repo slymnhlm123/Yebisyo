@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menü-Yebisyo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body class="bg-cream-100 font-sans">
+    <!-- Navbar -->
+    <nav class="bg-gradient-to-r from-orange-600 to-orange-400 shadow-lg p-4 flex items-center justify-between sticky top-0 z-50">
+        <div class="flex items-center">
+            <img src="../logo (1).png" alt="Restoran Logosu" class="h-12">
+        </div>
+        <div class="flex items-center space-x-8">
+            <a href="../index.html" class="nav-link text-white text-lg font-medium">Ana Sayfa</a>
+            <a href="../Hakkımızda/hakkımızda.html" class="nav-link text-white text-lg font-medium">Hakkımızda</a>
+            <a href="../İletişim/iletişim.html" class="nav-link text-white text-lg font-medium">İletişim</a>
+             <a href="../spesyal/spesyal.html" class="nav-link text-white text-lg font-medium">Spesyaller</a>
+             
+             <!-- İSTEDİĞİN ŞEY: SEPET YANINDA ADET SAYISI -->
+             <div class="relative">
+                 <a href="../Sipariş/siparis.html" class="bg-white text-orange-600 px-6 py-2 rounded-full font-semibold shadow-md hover:bg-gray-100 transition inline-flex items-center">
+                     Sepet 
+                     <span id="cart-count" class="ml-2 bg-red-600 text-white text-xs rounded-full w-6 h-6 flex items-center justify-center hidden">0</span>
+                 </a>
+             </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-cover bg-center h-64 flex items-center justify-center text-white" style="background-image: url('https://images.unsplash.com/photo-1517953720815-3ad3488a67f1?q=80&w=1025&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+        <h1 class="text-4xl font-bold text-cream-100">Menümüz</h1>
+    </section>
+
+    <!-- Menu Categories -->
+    <section class="py-12 px-4 max-w-6xl mx-auto">
+        <!-- Çorba -->
+        <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Çorbalar</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1642497394078-4794e837019c?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mercimek Çorbası" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Mercimek Çorbası</h3>
+                        <p class="text-gray-600"> mercimek ile hazırlanmış geleneksel lezzet.</p>
+                        <p class="text-orange-600 font-bold mt-2">180 TL</p>
+                        <button onclick="addToCart('Mercimek Çorbası', 180)" 
+                            class="mt-3 bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700">
+                            Sepete Ekle
+                         </button>
+                    </div>
+                </div>
+                <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1574885198468-488944bf9b89?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Tavuk Çorbası" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Tavuk Çorbası</h3>
+                        <p class="text-gray-600">Taze tavuk etiyle hazırlanan besleyici çorba.</p>
+                        <p class="text-orange-600 font-bold mt-2">200 TL</p>
+                         <button onclick="addToCart('Tavuk Çorbası', 200)" 
+                            class="mt-3 bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700">
+                            Sepete Ekle
+                         </button>
+                    </div>
+                </div>
+                 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="yayla.jpg" alt="Yayla Çorbası" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Yayla Çorbası</h3>
+                        <p class="text-gray-600">Taze tavuk etiyle hazırlanan besleyici çorba.</p>
+                        <p class="text-orange-600 font-bold mt-2">180 TL</p>
+                         <button onclick="addToCart('Yayla Çorbası', 180)" 
+                            class="mt-3 bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700">
+                            Sepete Ekle
+                         </button>
+                    </div>
+                </div>
+                 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1673021889619-0677506b56ac?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Ezogelin Çorbası" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Ezogelin Çorbası</h3>
+                        <p class="text-gray-600">Taze tavuk etiyle hazırlanan besleyici çorba.</p>
+                        <p class="text-orange-600 font-bold mt-2">180 TL</p>
+                         <button onclick="addToCart('Ezogelin Çorbası', 180)" 
+                            class="mt-3 bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700">
+                            Sepete Ekle
+                         </button>
+                    </div>
+                </div>
+                 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="kele.png" alt="Kelle Paça Çorbası" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Kelle Paça Çorbası</h3>
+                        <p class="text-gray-600">Taze et ile hazırlanan besleyici çorba.</p>
+                        <p class="text-orange-600 font-bold mt-2">250 TL</p>
+                         <button onclick="addToCart('Kelle Paça Çorbası', 250)" 
+                            class="mt-3 bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700">
+                            Sepete Ekle
+                         </button>
+                    </div>
+                </div>
+                 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="tomato.jpg" alt="Domates Çorbası" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Domates Çorbası</h3>
+                        <p class="text-gray-600">Taze domates ile hazırlanan besleyici çorba.</p>
+                        <p class="text-orange-600 font-bold mt-2">200 TL</p>
+                         <button onclick="addToCart('Domates Çorbası', 200)" 
+                            class="mt-3 bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700">
+                            Sepete Ekle
+                         </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ara Sıcak -->
+        <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Ara Sıcaklar</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1679310290259-78d9eaa32700?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Sigara Böreği" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Sigara Böreği</h3>
+                        <p class="text-gray-600">Peynir dolgulu çıtır börek.</p>
+                        <p class="text-orange-600 font-bold mt-2">220 TL</p>
+                         <button onclick="addToCart('Sigara Böreği', 220)" 
+                            class="mt-3 bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700">
+                            Sepete Ekle
+                         </button>
+                    </div>
+                </div>
+
+                <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="mücver.png" alt="Mücver" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Mücver</h3>
+                        <p class="text-gray-600">Bol Sebzeli Aperatif</p>
+                        <p class="text-orange-600 font-bold mt-2">200 TL</p>
+                         <button onclick="addToCart('Mücver', 200)" 
+                            class="mt-3 bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700">
+                            Sepete Ekle
+                         </button>
+                    </div>
+                </div>
+
+                <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="patates.jpg" alt="Patates Kroket" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Patates Kroket</h3>
+                        <p class="text-gray-600"> Püre patatesle yapılan, dışı çıtır içi yumuşacık kroketler. Daldırmalık sosla sun, bayılacaksın!</p>
+                        <p class="text-orange-600 font-bold mt-2">200 TL</p>
+                         <button onclick="addToCart('Patates Kroket', 200)" 
+                            class="mt-3 bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700">
+                            Sepete Ekle
+                         </button>
+                    </div>
+                </div>
+
+                <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="kurudolma.png" alt="Kuru Patlıcan Dolması" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Kuru Patlıcan Dolması</h3>
+                        <p class="text-gray-600"> kurutulmuş patlıcana yakışan ekşilikle beraber damaklarınıza kadar hissedeceğiniz müthiş tat</p>
+                        <p class="text-orange-600 font-bold mt-2">250 TL</p>
+                         <button onclick="addToCart('Kuru Patlıcan Dolması', 250)" 
+                            class="mt-3 bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700">
+                            Sepete Ekle
+                         </button>
+                    </div>
+                </div>
+
+                <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="paçanga.jpg" alt="Paçanga Böreği " class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Paçanga Böreği </h3>
+                        <p class="text-gray-600">Pastırma, kaşar ve biberle yapılan bu börekler, hem pratik hem şahane. </p>
+                        <p class="text-orange-600 font-bold mt-2">350 TL</p>
+                         <button onclick="addToCart('Paçanga Böreği', 350)" 
+                            class="mt-3 bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700">
+                            Sepete Ekle
+                         </button>
+                    </div>
+                </div>
+
+                <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="icli.jpeg" alt="İçli Köfte" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">İçli Köfte</h3>
+                        <p class="text-gray-600">Kıyma Tadını Damaklarına Kadar Tadacak Mükemmel Bir Tat</p>
+                        <p class="text-orange-600 font-bold mt-2">400 TL</p>
+                         <button onclick="addToCart('İçli Köfte', 400)" 
+                            class="mt-3 bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700">
+                            Sepete Ekle
+                         </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ana Yemek -->
+        <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Ana Yemekler</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+               <!-- Kayseri Yağlaması -->
+                <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="yağlama.png" alt="Kayseri Yağlaması" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Kayseri Yağlaması</h3>
+                        <p class="text-gray-600">Kat kat lavaşlar arasında kıymalı harç, yanında sarımsaklı yoğurtla servis edilir.</p>
+                        <p class="text-orange-600 font-bold mt-2">600 TL</p>
+                         <button onclick="addToCart('Kayseri Yağlaması', 600)" 
+                            class="mt-3 bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700">
+                            Sepete Ekle
+                         </button>
+                    </div>
+                </div>
+
+                <!-- Fırın Tavuk Baget -->
+                <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="baget.png" alt="Fırın Tavuk Baget" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Fırın Tavuk Baget</h3>
+                        <p class="text-gray-600">Baharatlı patates eşliğinde fırınlanmış çıtır tavuk butları.</p>
+                        <p class="text-orange-600 font-bold mt-2">400 TL</p>
+                         <button onclick="addToCart('Fırın Tavuk Baget', 400)" 
+                            class="mt-3 bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700">
+                            Sepete Ekle
+                         </button>
+                    </div>
+                </div>
+
+                <!-- Etli Nohut -->
+                <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="etli-nohut-yemegi-i.jpg" alt="Etli Nohut" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Etli Nohut</h3>
+                        <p class="text-gray-600">Lokum gibi etle birleşen nohutun sıcacık uyumu.</p>
+                        <p class="text-orange-600 font-bold mt-2">350 TL</p>
+                         <button onclick="addToCart('Etli Nohut', 350)" 
+                            class="mt-3 bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700">
+                            Sepete Ekle
+                         </button>
+                    </div>
+                </div>
+
+                <!-- Karnıyarık -->
+                <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="Etsiz-Karniyarik.jpg" alt="Karnıyarık" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Karnıyarık</h3>
+                        <p class="text-gray-600">Kızartılmış patlıcan içine nefis kıymalı harçla fırınlanır.</p>
+                        <p class="text-orange-600 font-bold mt-2">400 TL</p>
+                         <button onclick="addToCart('Karnıyarık', 400)" 
+                            class="mt-3 bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700">
+                            Sepete Ekle
+                         </button>
+                    </div>
+                </div>
+
+                <!-- Et Döner -->
+                <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="döner.jpg" alt="Et Döner" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Et Döner</h3>
+                        <p class="text-gray-600">Yurdumuzun Yıllardır Vazgeçilmez lezzetini tadın</p>
+                        <p class="text-orange-600 font-bold mt-2">320 TL</p>
+                         <button onclick="addToCart('Et Döner', 320)" 
+                            class="mt-3 bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700">
+                            Sepete Ekle
+                         </button>
+                    </div>
+                </div>
+
+                <!--Adana Kebap -->
+                <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="adana-kebap-2-sutis.jpg" alt="Adana Kebap" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Adana Kebap</h3>
+                        <p class="text-gray-600">Ustamızın Ellerinden Enfes bir adana turunu damaklarınızda hissedeceksiniz</p>
+                        <p class="text-orange-600 font-bold mt-2">450 TL</p>
+                         <button onclick="addToCart('Adana Kebap', 450)" 
+                            class="mt-3 bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700">
+                            Sepete Ekle
+                         </button>
+                    </div>
+                </div>
+
+                <!-- İzmir Köfte -->
+                <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="izmir-kofte-tarifi-1652-diger-izmir-kofte-tarifi-1640-16-B.jpg" alt="İzmir Köfte" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">İzmir Köfte</h3>
+                        <p class="text-gray-600">Patatesle fırınlanan domates soslu köfte harikası.</p>
+                        <p class="text-orange-600 font-bold mt-2">450 TL</p>
+                         <button onclick="addToCart('İzmir Köfte', 450)" 
+                            class="mt-3 bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700">
+                            Sepete Ekle
+                         </button>
+                    </div>
+                </div>
+
+                <!-- Hatay Usulü Tavuk Döner -->
+                <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="hatay.jpg" alt="Hatay Usulü Tavuk Döner" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Hatay Usulü Tavuk Döner</h3>
+                        <p class="text-gray-600">Hatayın Enfes domates sosuyla birleşen tavuklar adeta dans ediyor damaklarınızda</p>
+                        <p class="text-orange-600 font-bold mt-2">350 TL</p>
+                         <button onclick="addToCart('Hatay Usulü Tavuk Döner', 350)" 
+                            class="mt-3 bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700">
+                            Sepete Ekle
+                         </button>
+                    </div>
+                </div>
+
+                  <!-- Alinazik -->
+                <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="alinazik.jpg" alt="Alinazik " class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Alinazik</h3>
+                        <p class="text-gray-600">Bol Etli tepsi bol malzeme garanti doyum</p>
+                        <p class="text-orange-600 font-bold mt-2">500 TL</p>
+                         <button onclick="addToCart('Alinazik', 500)" 
+                            class="mt-3 bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700">
+                            Sepete Ekle
+                         </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Salata -->
+        <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Salatalar</h2>
+             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                 <!-- Çoban Salata -->
+                <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="coban-salatasi.jpg" alt="Çoban Salata" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Çoban Salata</h3>
+                        <p class="text-gray-600">Domates, salatalık, soğan ve biberin zeytinyağlı uyumu.</p>
+                        <p class="text-orange-600 font-bold mt-2">220 TL</p>
+                         <button onclick="addToCart('Çoban Salata', 220)" 
+                            class="mt-3 bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700">
+                            Sepete Ekle
+                         </button>
+                    </div>
+                </div>
+
+                <!-- Mevsim Salata -->
+                <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="Mevsim-Salata-.jpg" alt="Mevsim Salata" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Mevsim Salata</h3>
+                        <p class="text-gray-600">Her mevsimin taze yeşillikleri bir arada! Limonlu ve hafif.</p>
+                        <p class="text-orange-600 font-bold mt-2">200 TL</p>
+                         <button onclick="addToCart('Mevsim Salata', 200)" 
+                            class="mt-3 bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700">
+                            Sepete Ekle
+                         </button>
+                    </div>
+                </div>
+
+                <!-- Gavurdağı Salatası -->
+                <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="tomato-and-walnut-salad-gavurdagi-salatasi-20.jpg" alt="Gavurdağı Salatası" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Gavurdağı Salatası</h3>
+                        <p class="text-gray-600">Cevizli, nar ekşili, bol domatesli Antep usulü bomba bir salata.</p>
+                        <p class="text-orange-600 font-bold mt-2">250 TL</p>
+                         <button onclick="addToCart('Gavurdağı Salata', 250)" 
+                            class="mt-3 bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700">
+                            Sepete Ekle
+                         </button>
+                    </div>
+                </div>
+
+                <!-- Yoğurtlu Semizotu Salatası -->
+                <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="salatasemiz.jpg" alt="Yoğurtlu Semizotu" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Yoğurtlu Semizotu</h3>
+                        <p class="text-gray-600">Semizotunun yoğurtla ferahlatan ve tok tutan hali.</p>
+                        <p class="text-orange-600 font-bold mt-2">230 TL</p>
+                         <button onclick="addToCart('Yoğurtlu Semizotu', 230)" 
+                            class="mt-3 bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700">
+                            Sepete Ekle
+                         </button>
+                    </div>
+                </div>
+
+                <!-- Roka Salatası -->
+                <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="roka.jpg" alt="Roka Salatası" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Roka Salatası</h3>
+                        <p class="text-gray-600">Roka, limon ve zeytinyağı... Etin yanına efsane eşlikçi.</p>
+                        <p class="text-orange-600 font-bold mt-2">200 TL</p>
+                         <button onclick="addToCart('Roka Salata', 200)" 
+                            class="mt-3 bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700">
+                            Sepete Ekle
+                         </button>
+                    </div>
+                </div>
+
+                <!-- Ton Balıklı Salata -->
+                <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="ton-balik-salata.jpg" alt="Ton Balıklı Salata" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Ton Balıklı Salata</h3>
+                        <p class="text-gray-600">Protein dolu ton balığı, mısır ve yeşilliklerle doyurucu bir salata.</p>
+                        <p class="text-orange-600 font-bold mt-2">300 TL</p>
+                         <button onclick="addToCart('Ton Balıklı Salata', 300)" 
+                            class="mt-3 bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700">
+                            Sepete Ekle
+                         </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- İçecek -->
+        <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">İçecekler</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Ayran -->
+                <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="Fresh_ayran.jpg" alt="Ayran" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Ayran</h3>
+                        <p class="text-gray-600">Serinletici, yoğurt bazlı geleneksel içeceğimiz.</p>
+                        <p class="text-orange-600 font-bold mt-2">60 TL</p>
+                         <button onclick="addToCart('Ayran', 60)" 
+                            class="mt-3 bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700">
+                            Sepete Ekle
+                         </button>
+                    </div>
+                </div>
+
+                <!-- Limonata -->
+                <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="limonata.jpg" alt="Limonata" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Limonata</h3>
+                        <p class="text-gray-600">Taze limonla yapılmış, yazın favorisi ferah içecek.</p>
+                        <p class="text-orange-600 font-bold mt-2">100 TL</p>
+                         <button onclick="addToCart('Limonata', 100)" 
+                            class="mt-3 bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700">
+                            Sepete Ekle
+                         </button>
+                    </div>
+                </div>
+
+                <!-- Şalgam Suyu -->
+                <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="meshur-adana-seyyarin-salgam-suyu.png" alt="Şalgam" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Şalgam Suyu</h3>
+                        <p class="text-gray-600">Acılı ya da normal, kebabın yanında efsane gider.</p>
+                        <p class="text-orange-600 font-bold mt-2">70 TL</p>
+                         <button onclick="addToCart('Şalgam Suyu', 70)" 
+                            class="mt-3 bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700">
+                            Sepete Ekle
+                         </button>
+                    </div>
+                </div>
+
+                <!-- Soğuk Çay -->
+                <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="seftali_ice_tea5_2.jpg" alt="Soğuk Çay" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Soğuk Çay</h3>
+                        <p class="text-gray-600">Şeftalili ya da limonlu, buz gibi serinlik.</p>
+                        <p class="text-orange-600 font-bold mt-2">90 TL</p>
+                         <button onclick="addToCart('Soğuk Çay', 90)" 
+                            class="mt-3 bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700">
+                            Sepete Ekle
+                         </button>
+                    </div>
+                </div>
+
+                <!-- Türk Kahvesi -->
+                <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="kahve.jpg" alt="Türk Kahvesi" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Türk Kahvesi</h3>
+                        <p class="text-gray-600">Köpüklü, bol telveli, kırk yıl hatırı olan klasik tat.</p>
+                        <p class="text-orange-600 font-bold mt-2">100 TL</p>
+                         <button onclick="addToCart('Türk Kahvesi', 100)" 
+                            class="mt-3 bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700">
+                            Sepete Ekle
+                         </button>
+                    </div>
+                </div>
+
+                <!-- Soda -->
+                <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="soda.jpg" alt="Soda" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Soda</h3>
+                        <p class="text-gray-600">Yemeğin üstüne mideyi rahatlatan doğal gazlı su.</p>
+                        <p class="text-orange-600 font-bold mt-2">50 TL</p>
+                         <button onclick="addToCart('Soda', 50)" 
+                            class="mt-3 bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700">
+                            Sepete Ekle
+                         </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Tatlı -->
+        <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Tatlılar</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                     <!-- Sütlaç -->
+                    <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                        <img src="sütlac.png" alt="Sütlaç" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold text-gray-800">Sütlaç</h3>
+                            <p class="text-gray-600">Fırında pişmiş sütlü tatlı, üzeri nar gibi kızarmış.</p>
+                            <p class="text-orange-600 font-bold mt-2">200 TL</p>
+                         <button onclick="addToCart('Sütlaç', 200)" 
+                            class="mt-3 bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700">
+                            Sepete Ekle
+                         </button>
+                        </div>
+                    </div>
+
+                    <!-- Baklava -->
+                    <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                        <img src="baklava.jpg" alt="Baklava" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold text-gray-800">Baklava</h3>
+                            <p class="text-gray-600">Kat kat yufka, bol ceviz ve şerbetin efsane uyumu.</p>
+                            <p class="text-orange-600 font-bold mt-2">250 TL</p>
+                         <button onclick="addToCart('Baklava', 250)" 
+                            class="mt-3 bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700">
+                            Sepete Ekle
+                         </button>
+                        </div>
+                    </div>
+
+                    <!-- Kazandibi -->
+                    <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                        <img src="kazandibi2.jpg" alt="Kazandibi" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold text-gray-800">Kazandibi</h3>
+                            <p class="text-gray-600">Altı hafif yanık, karamelli sütlü tatlı. Efsane nostalji!</p>
+                            <p class="text-orange-600 font-bold mt-2">220 TL</p>
+                         <button onclick="addToCart('Kazandibi', 220)" 
+                            class="mt-3 bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700">
+                            Sepete Ekle
+                         </button>
+                        </div>
+                    </div>
+
+                    <!-- Profiterol -->
+                    <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                        <img src="profiterol.jpg" alt="Profiterol" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold text-gray-800">Profiterol</h3>
+                            <p class="text-gray-600">İçi krema dolu toplar, üzeri çikolata sosla kaplı.</p>
+                            <p class="text-orange-600 font-bold mt-2">250 TL</p>
+                         <button onclick="addToCart('Profiterol', 250)" 
+                            class="mt-3 bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700">
+                            Sepete Ekle
+                         </button>
+                        </div>
+                    </div>
+
+                    <!-- Künefe -->
+                    <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                        <img src="kunefe.png" alt="Künefe" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold text-gray-800">Künefe</h3>
+                            <p class="text-gray-600">İçinde erimiş peynir, üstü çıtır kadayıf... Şerbetle efsaneleşir.</p>
+                            <p class="text-orange-600 font-bold mt-2">280 TL</p>
+                         <button onclick="addToCart('Künefe', 280)" 
+                            class="mt-3 bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700">
+                            Sepete Ekle
+                         </button>
+                        </div>
+                    </div>
+
+                    <!-- Magnolia -->
+                    <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden">
+                        <img src="magnolia.png " alt="Magnolia" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold text-gray-800">Magnolia</h3>
+                            <p class="text-gray-600">Muzlu, bisküvili ve bol kremalı modern tatlı klasiği.</p>
+                            <p class="text-orange-600 font-bold mt-2">250 TL</p>
+                         <button onclick="addToCart('Magnolia', 250)" 
+                            class="mt-3 bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700">
+                            Sepete Ekle
+                         </button>
+                        </div>
+                    </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p>© 2025 Yebisyo. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="menu.js"></script>
+</body>
+</html>
