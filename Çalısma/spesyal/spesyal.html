@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spesyaller - Restoran Adisyon Sistemi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="spesyal.css">
+</head>
+<body class="bg-cream-100 font-sans">
+    <!-- Navbar -->
+    <nav class="bg-gradient-to-r from-orange-600 to-orange-400 shadow-lg p-4 flex items-center justify-between sticky top-0 z-50">
+       <div class="flex items-center">
+            <img src="../logo (1).png" alt="Restoran Logosu" class="h-12">
+        </div>
+        <div class="flex items-center space-x-8">
+            <a href="../index.html" class="nav-link text-white text-lg font-medium">Ana Sayfa</a>
+            <a href="../menu/menu.html" class="nav-link text-white text-lg font-medium">Menü</a>
+            <a href="../Hakkımızda/hakkımızda.html" class="nav-link text-white text-lg font-medium">Hakkımızda</a>
+            <a href="../İletişim/iletişim.html" class="nav-link text-white text-lg font-medium">İletişim</a>
+             <button class="nav-button bg-white text-orange-600 px-6 py-2 rounded-full font-semibold shadow-md"><a href="../Sipariş/siparis.html">Sepet</a></button>
+
+        </div>
+    </nav>
+
+      <!-- Hero Section -->
+    <section class="bg-cover bg-center h-64 flex items-center justify-center text-white" style="background-image: url('https://images.unsplash.com/photo-1517953720815-3ad3488a67f1?q=80&w=1025&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+        <h1 class="text-4xl font-bold text-cream-100">Spesyallerimiz</h1>
+    </section>
+
+    <!-- Spesyaller Section -->
+    <section class="py-12 px-4 max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Öne Çıkan Spesyaller</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Spesyal 1 -->
+            <div class="menu-item relative bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="beef.png" alt="Beef Wellington" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Beef Wellington</h3>
+                    <p class="text-gray-600">Fileto biftek, mantarlı harç ve milföy hamuru ile fırınlanıyor.</p>
+                    <p class="text-orange-600 font-bold mt-2">180 TL</p>
+                </div>
+                <div class="overlay absolute inset-0 bg-white bg-opacity-90 flex flex-col justify-center items-center text-center p-4 opacity-0 transition-opacity duration-300">
+                    <h3 class="text-xl font-semibold text-gray-800">Beef Wellington Özellikleri</h3>
+                    <p class="text-gray-600 mt-2">Neden Spesyal? Sunumu gösterişli ve lezzeti eşsiz.</p>
+                    <p class="text-gray-600 mt-2">Özellikler: Helal et, milföy dokusu, zengin tat.</p>
+                </div>
+            </div>
+            <!-- Spesyal 2 -->
+            <div class="menu-item relative bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="paella.jpeg" alt="Paella" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Paella</h3>
+                    <p class="text-gray-600">Safranlı pirinç, deniz ürünleri, tavuk ve sebzelerle kocaman tava yemeği.</p>
+                    <p class="text-orange-600 font-bold mt-2">90 TL</p>
+                </div>
+                <div class="overlay absolute inset-0 bg-white bg-opacity-90 flex flex-col justify-center items-center text-center p-4 opacity-0 transition-opacity duration-300">
+                    <h3 class="text-xl font-semibold text-gray-800">Paella Özellikleri</h3>
+                    <p class="text-gray-600 mt-2">Neden Spesyal? Renkli ve görsel şölen sunar.</p>
+                    <p class="text-gray-600 mt-2">Özellikler: Deniz ürünleri, safran, helal malzemeler.</p>
+                </div>
+            </div>
+            <!-- Spesyal 3 -->
+            <div class="menu-item relative bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="ratat.png" alt="Ratatouille" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Ratatouille</h3>
+                    <p class="text-gray-600">İncecik dilimlenmiş sebzelerin sanatsal şekilde dizilip fırınlandığı tabak.</p>
+                    <p class="text-orange-600 font-bold mt-2">70 TL</p>
+                </div>
+                <div class="overlay absolute inset-0 bg-white bg-opacity-90 flex flex-col justify-center items-center text-center p-4 opacity-0 transition-opacity duration-300">
+                    <h3 class="text-xl font-semibold text-gray-800">Ratatouille Özellikleri</h3>
+                    <p class="text-gray-600 mt-2">Neden Spesyal? Hem göz hem mide bayramı.</p>
+                    <p class="text-gray-600 mt-2">Özellikler: Taze sebzeler, sanatsal sunum, helal.</p>
+                </div>
+            </div>
+            <!-- Spesyal 4 -->
+            <div class="menu-item relative bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="sushi.jpg" alt="Sushi Omakase" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Sushi Omakase</h3>
+                    <p class="text-gray-600">Şefin seçtiği günlük taze sushi çeşitleri.</p>
+                    <p class="text-orange-600 font-bold mt-2">180 TL</p>
+                </div>
+                <div class="overlay absolute inset-0 bg-white bg-opacity-90 flex flex-col justify-center items-center text-center p-4 opacity-0 transition-opacity duration-300">
+                    <h3 class="text-xl font-semibold text-gray-800">Sushi Omakase Özellikleri</h3>
+                    <p class="text-gray-600 mt-2">Neden Spesyal? Her tabak bir sanat eseri gibi.</p>
+                    <p class="text-gray-600 mt-2">Özellikler: Taze balık, helal, şef seçimi.</p>
+                </div>
+            </div>
+            <!-- Spesyal 5 -->
+            <div class="menu-item relative bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="mole.png" alt="Mole Poblano" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Mole Poblano</h3>
+                    <p class="text-gray-600">Tavuk veya hindi üzerinde çikolata, biber ve baharatlarla yapılan soslu yemek.</p>
+                    <p class="text-orange-600 font-bold mt-2">100 TL</p>
+                </div>
+                <div class="overlay absolute inset-0 bg-white bg-opacity-90 flex flex-col justify-center items-center text-center p-4 opacity-0 transition-opacity duration-300">
+                    <h3 class="text-xl font-semibold text-gray-800">Mole Poblano Özellikleri</h3>
+                    <p class="text-gray-600 mt-2">Neden Spesyal? Görseli farklı ve lezzetli.</p>
+                    <p class="text-gray-600 mt-2">Özellikler: Çikolata sos, helal et, baharatlı.</p>
+                </div>
+            </div>
+            <!-- Spesyal 6 -->
+            <div class="menu-item relative bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="foiegras.jpg" alt="Foie Gras" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Foie Gras</h3>
+                    <p class="text-gray-600">Özel hazırlanmış ördek veya kaz ciğeri, şık sunumlarla.</p>
+                    <p class="text-orange-600 font-bold mt-2">130 TL</p>
+                </div>
+                <div class="overlay absolute inset-0 bg-white bg-opacity-90 flex flex-col justify-center items-center text-center p-4 opacity-0 transition-opacity duration-300">
+                    <h3 class="text-xl font-semibold text-gray-800">Foie Gras Özellikleri</h3>
+                    <p class="text-gray-600 mt-2">Neden Spesyal? Çok lüks ve gösterişli.</p>
+                    <p class="text-gray-600 mt-2">Özellikler: Helal alternatif, yumuşak doku, zengin tat.</p>
+                </div>
+            </div>
+            <!-- Spesyal 7 -->
+            <div class="menu-item relative bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="baklava.jpg" alt="Baklava" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Baklava</h3>
+                    <p class="text-gray-600">Fıstıklı, cevizli veya kaymaklı, şerbetli tatlı.</p>
+                    <p class="text-orange-600 font-bold mt-2">50 TL</p>
+                </div>
+                <div class="overlay absolute inset-0 bg-white bg-opacity-90 flex flex-col justify-center items-center text-center p-4 opacity-0 transition-opacity duration-300">
+                    <h3 class="text-xl font-semibold text-gray-800">Baklava Özellikleri</h3>
+                    <p class="text-gray-600 mt-2">Neden Spesyal? Dünyada 'special dessert' olarak biliniyor.</p>
+                    <p class="text-gray-600 mt-2">Özellikler: Şerbetli, helal, geleneksel tat.</p>
+                </div>
+            </div>
+            <!-- Spesyal 8 -->
+            <div class="menu-item relative bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="ceviche.jpg" alt="Ceviche" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Ceviche</h3>
+                    <p class="text-gray-600">Çiğ balık, limon suyu, soğan ve kişnişle marine edilmiş ferahlatıcı tabak.</p>
+                    <p class="text-orange-600 font-bold mt-2">85 TL</p>
+                </div>
+                <div class="overlay absolute inset-0 bg-white bg-opacity-90 flex flex-col justify-center items-center text-center p-4 opacity-0 transition-opacity duration-300">
+                    <h3 class="text-xl font-semibold text-gray-800">Ceviche Özellikleri</h3>
+                    <p class="text-gray-600 mt-2">Neden Spesyal? Renkli ve görselliği harika.</p>
+                    <p class="text-gray-600 mt-2">Özellikler: Taze balık, helal, ferahlatıcı.</p>
+                </div>
+            </div>
+            <!-- Spesyal 9 -->
+            <div class="menu-item relative bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="../buritto.jpg" alt="Buritto" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Buritto</h3>
+                    <p class="text-gray-600">Tortillanın katlanış biçimi, içerisine sürülen fasulye püresi, et, tavuk, peynir gibi malzemelerle değişik çeşitler hazırlanabilir.</p>
+                    <p class="text-orange-600 font-bold mt-2">85 TL</p>
+                </div>
+                <div class="overlay absolute inset-0 bg-white bg-opacity-90 flex flex-col justify-center items-center text-center p-4 opacity-0 transition-opacity duration-300">
+                    <h3 class="text-xl font-semibold text-gray-800">Buritto Özellikleri</h3>
+                    <p class="text-gray-600 mt-2">Neden Spesyal? Renkli ve görselliği harika.</p>
+                    <p class="text-gray-600 mt-2">Özellikler: Taze tavuk, helal, lezzet fışkırması.</p>
+                </div>
+            </div>
+           
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p>© 2025 Yebisyo. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="spesyal.js"></script>
+</body>
+</html>
